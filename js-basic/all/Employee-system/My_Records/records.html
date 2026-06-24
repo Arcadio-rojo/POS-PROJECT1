@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="../Index/index.css" rel="stylesheet" type="text/css">
+    <link href="records.css" rel="stylesheet" type="text/css">
+  
+</head>
+<body>
+    <section id="Records" class="records">
+        <div class="left-container">
+            <div class="profile">
+                <img src="../Transaction/Pictures/Pics_burger/abc.png" class="profile-pic" id="profilePic">
+              
+                <input type="file" class="my_file" accept="image/*" id="fileUpload" style="display: none;">
+            </div>
+            <h2>Employee Name</h2>
+            <p>Employee</p>
+            <nav>
+                <ul>
+                    <li><a href="../Home/Home.html">HOME</a></li>
+                    <li><a href="../Transaction/Transaction.html">TRANSACTION</a></li>
+                    <li><a href="../Inventory/inventory.html">INVENTORY</a></li>
+                    <li><a href="#" class="active">MY RECORD</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#" onclick="logTimeOut(); return false;" rel="stylesheet" type="text/css">
+                <img src="../Home/Picstures/Exita.png" alt="Exit" /> Log Out
+                </a>
+
+            </div>
+            </div>
+            
+            
+            
+        </div>
+
+        <div class="main-content">
+            <div class="top-container">
+                <h2>MY RECORDS</h2>
+
+            </div>
+            <div class="guide-inventory">
+                <!-- Scrollable table for Attendance Records -->
+                <div class="scroll-table" id="stocksTable" style="display: block;"> <!-- Set to block to ensure visibility -->
+                    <table border="1">
+                        <thead>    
+                            <tr>
+                                <th>DATE</th>
+                                <th>TIME-IN</th>
+                                <th>TIME-OUT</th>
+                                <th>ATTEND</th>
+                            </tr>
+                        </thead>  
+                        <tbody id="attendanceBody">
+                           
+                            <!-- Rows will be added here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chart-container"> <!-- Wrapper for the chart and performance div -->
+                    <div class="chart">
+                        <canvas id="doughnut" width="300" height="300"></canvas>
+                    </div>
+                    <div class="performance">  
+                        <h3>PERFORMANCE:</h3>
+                        <p id="presentCount">PRESENT</p>
+                        <p id="lateCount">LATE</p>
+                        <p id="absentCount">ABSENT</p>
+                    </div>
+                </div>
+                
+        </div>
+      
+  
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <script src="../Index/index.js"></script>
+    <script src="records.js"></script>
+
+
+</body>
+</html>

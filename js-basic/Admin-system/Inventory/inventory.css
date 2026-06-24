@@ -1,0 +1,338 @@
+.inventory {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.Inventory_tracking {
+    background-color: #FCF5E5;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;  /* Compressed overall container width */
+    height: 72vh; /* Compressed overall container height */
+    margin: 3vh;
+    border-radius: 20px;
+    border: 1px solid #F2B234;
+    margin-top: 5vh;
+}
+  
+.search_bar {
+    flex-direction: row;
+    display: flex;  
+    align-items: bottom; 
+    height: 4vh;
+    padding: 2vw;
+}
+
+
+
+#searchBar {
+    width: 18vw; 
+    height: 4vh;  
+    border-radius: 10px;  
+    border: 2px solid #F4D44B; 
+    padding: 0 10px; 
+}
+
+.inventory_table {
+
+    height: 48vh;
+    width: 100%;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    
+}
+
+.table {
+    background-color: white;
+    border-radius: 20px;
+    width: 80%;  /* Set table width to 80% */
+    margin: 0 auto; /* Center the table */
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;  /* Make the table width 100% within its container */
+    border-collapse: collapse;
+    background-color: #FCF5E5;
+    table-layout: fixed; 
+    border: none; /* Remove overall table border */
+}
+
+table thead th,
+table tbody td { 
+    border: none; /* Remove borders from table header and body cells */
+}
+
+table thead th {
+    background-color: white;
+    color: black;
+    text-align: center;
+    position: sticky; 
+    top: 0;          
+    z-index: 2;     
+}
+
+table td {
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: #FCF5E5;
+}
+
+table tr:hover {
+    background-color: white;
+}
+
+table tr {
+    height: 40px;
+}
+
+.scroll-table {
+    width: 100%; /* Keep scrollable area full width of container */
+    max-height: 48vh; 
+    overflow-y: auto;  
+    border: none; /* Remove border from the scrollable table */
+}
+
+.add_del_edit {
+
+    width: 100%;
+    height: 3vh;
+    display: flex;
+    justify-content: right; /* Space between elements */
+    align-items: center; /* Vertically center the buttons */
+    position:relative; /* enable to change the position of icons button*/
+}
+
+
+
+/* Styling for the buttons */
+.add_del_edit button {
+    /* Adds padding to buttons */
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 7px; /* Adjust to make text visible */
+    cursor: pointer;
+    color: transparent;
+    transition: background-color 0.3s ease;
+    padding: 5px; /* Adjust padding for spacing */
+    width: auto; /* Set to auto to fit content */
+    display: flex;
+    align-items: center;
+    position:relative;
+   
+   
+    
+}
+
+/* Container to hold Edit and Delete buttons and push them to the right */
+#edit-delete-container {
+    margin-right: 45px;
+    display: flex;
+    gap: 13px; /* Add space between the Edit and Delete buttons */
+}
+
+.add_del_edit button img {
+    opacity: 0.7; /* Set initial opacity */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity change */
+}
+    .add_del_edit button:hover img {
+        opacity: 0.2x;
+        cursor: pointer; /* Optional: changes cursor to a pointer */
+        transform: scale(1.1); /* Slightly increases size */
+    }
+    
+
+#edit-delete-container button img {
+    margin-right: 4px; /* Adjusts spacing between icon and text */
+}
+
+
+
+
+.add_del_edit button:focus {
+    outline: none; /* Remove outline on focus */
+}
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the modal is above other content */
+  
+}
+
+.modal-content {
+    background-color: #f5f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+}
+
+.modal-content label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.modal-content input, .modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dec741;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.close-button {
+    float: right;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+#submitAdd {
+    padding: 10px 20px;
+    background-color: #563a26;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submitAdd:hover {
+    background-color: #6c4631;
+}
+
+
+p{
+    font-size: 12px;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fbfbfb; /*pop up background color*/
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #f5a53d;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: rgb(247, 245, 245);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: #885c2a; 
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#cancelDeleteButton {
+    background-color: #411902; 
+}
+
+#cancelDeleteButton:hover {
+    background-color: #a85228;
+}
+
+.icon-button {
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.icon-button .tooltip {
+    visibility: hidden;
+    color: #000000;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    bottom: 100%; /* Position tooltip above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    margin-bottom: 5px;
+    font-size: 12px;
+    z-index: 1;
+}
+
+.icon-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+#editModal2 {
+    display: none; /* Hide the modal initially */
+    position: fixed; /* Stay in place */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by 50% of the modal size */
+    z-index: 1000; /* Ensure it appears above other content */
+    background-color: #fff; /* Background color */
+    padding: 20px; /* Space inside the modal */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 50%; /* Adjust as needed */
+    max-width: 600px; /* Prevent it from getting too wide */
+}
+
+#editModal2 .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Below the modal */
+    display: none; /* Hidden initially */
+}

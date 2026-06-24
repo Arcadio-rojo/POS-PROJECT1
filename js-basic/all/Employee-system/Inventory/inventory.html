@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link href="../Index/index.css" rel="stylesheet" type="text/css">
+    <link href="inventory.css" rel="stylesheet" type="text/css">
+  
+</head>
+<body>
+    <section id="Inventory" class="inventory">
+        <div class="left-container">
+            <div class="profile">
+                <img src="../Transaction/Pictures/Pics_burger/abc.png" class="profile-pic" id="profilePic">
+                
+                <input type="file" class="my_file" accept="image/*" id="fileUpload" style="display: none;">
+            </div>
+            <h2>Employee Name</h2>
+            <p>Employee</p>
+            <nav>
+                <ul>
+                    <li><a href="../Home/Home.html">HOME</a></li>
+                    <li><a href="../Transaction/Transaction.html">TRANSACTION</a></li>
+                    <li><a href="#" class="active">INVENTORY</a></li>
+                    <li><a href="../My_Records/records.html">MY RECORD</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#" onclick="logTimeOut(); return false;" rel="stylesheet" type="text/css">
+                    <img src="../Home/Picstures/Exita.png" alt="Exit" /> Log Out
+                    </a>
+            </div>
+            
+        </div>
+
+        <div class="main-content">
+            <div class="top-container">
+                <h2>INVENTORY</h2>
+            </div>
+            <div class="Select"> 
+                <select name="Format" id="format" onchange="displayTable()"> 
+                    <option selected disabled>Select Inventory</option>
+                    <option value="stocks">Stocks</option>
+                    <option value="products">Products</option>
+                </select>
+            </div>
+
+            <div class="guide-inventory">
+                <div class="search-container">
+                    <input type="text" id="searchBar" placeholder="Search..." onkeyup="filterTable()">
+                </div>
+                
+                 <!-- Scrollable table for Stocks -->
+                 <div class="scroll-table" id="stocksTable" style="display: none;">
+                    <table border="1">
+                        <thead>     
+                            <tr>
+                                <th>Ingredient</th>
+                                <th>Category</th>
+                                <th>Stocks</th>
+                                <th>Remaining</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>  
+                        <tbody id="stocksBody">
+                            <!-- Additional rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Scrollable table for Products -->
+                <div class="scroll-table" id="productsTable" style="display: none;">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Category</th>
+                                <th>Total Item</th>
+                                <th>Total Amount</th>
+                                <th>Date</th>
+                          
+                            </tr> 
+                        </thead>
+                        <tbody id="productsBody">
+                            <!-- Add your product rows here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../Index/index.js"></script>
+    <script src="inventory.js"></script>
+</body>
+</html>
+
+

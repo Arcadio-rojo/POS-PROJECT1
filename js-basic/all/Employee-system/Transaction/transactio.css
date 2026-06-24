@@ -1,0 +1,619 @@
+
+.transaction {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+.menu-items {
+    grid-column: 1 / 2;
+    height: 25vh;
+    width: 50vw;
+ 
+    margin-top: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+} 
+
+
+
+.menu-item {
+    width: 12vw; 
+    height: 9vh;
+    margin: 1vh;
+    font-size: 1.2rem; 
+    background: linear-gradient(to right, #FBF1C5 65%, white 35%); /* Default gradient */
+    border: 2px solid #F4D44B; 
+    border-radius: 20px;
+    color: #925E33;
+    cursor: pointer;
+    position: relative; 
+    overflow: hidden; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: background 0.3s ease; 
+    text-align:left;
+    padding-right: 10vh;
+}
+
+.menu-item:hover {
+    background: linear-gradient(to right, #FBF1C5 100%, white 0%); 
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4); 
+}
+
+.menu-item.active {
+    background: #FBF1C5; 
+    color: #B63C2C; 
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-weight: bold;
+    padding-left: 10vh;
+
+}
+
+#fries {
+    padding-right: 14vh;
+}
+
+#burgers::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(Pictures/burger1.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    opacity: .7; 
+    background-size: 15vh;
+    background-position: right;
+    overflow: hidden;
+}
+
+#hotdog::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(Pictures/hotdog.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    opacity: .7;
+    background-size: 15vh;
+    background-position: right;
+    overflow: hidden;
+}
+
+#fries::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(Pictures/fries.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    opacity: 0.7;
+    background-size: 15vh;
+    background-position: right;
+    overflow: hidden;
+}
+
+#nuggets::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(Pictures/nuggets.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    opacity: 0.7;
+    background-size: 15vh;
+    background-position: right;
+    overflow: hidden;
+}
+
+#fried-noodles::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(Pictures/fried-noddles.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    opacity: 0.7;
+    background-size: 15vh;
+    background-position: right;
+    overflow: hidden;
+     
+}
+
+
+.summary-container {
+    background: linear-gradient(to top, white 50%, #FEC966);
+    width: 20vw;
+    height: 80vh;
+    border: 4px solid #FDD94E;
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+
+
+
+.tableee{
+    overflow-y: scroll;
+    width: 100%;
+    height: 35vh;
+
+}
+
+.summary-container h1{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin: 0 auto; 
+    padding:20px;
+    font-size: 20px;
+}
+
+
+.summary_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0; 
+}
+
+
+.summary_table th, .summary_table td {
+    padding: 9px; /* Padding inside cells */
+    text-align: center; /* Center text in cells */
+}
+
+.summary_footer {
+    margin-top: 5px; /* Space above the footer */
+    flex-direction: column;
+
+
+
+}
+
+.startline {
+    height: 22vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.endline {
+   
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.C_P_B{
+    margin-top: 4vh;
+    height: 7vh;
+    justify-content: space-between;
+  
+
+    
+}
+
+
+.startline h1{
+    color: rgb(228, 220, 220);
+
+}
+.recordsTotal {
+    margin-top: 3vh;
+
+
+
+}
+.process-button{
+    margin-left: 20px
+}
+
+.cancel-button, .process-button {
+    font-size:  14px;
+    width: 5vw;
+    height: 40px;
+
+    background-color: #F4D44B; /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+
+.cancel-button:hover, .process-button:hover, .void-button:hover {
+    background-color: #FEBA37; /* Hover color */
+}
+
+
+.combined-container {
+    margin-top: 3vh;
+    height: auto; 
+    width: auto; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+.product {
+    width: 50vw;
+    height: auto;
+    justify-content: flex-start; 
+    display: flex;
+}
+
+/* Product Display Section */
+#product-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Product Box */
+.product-box {
+    position: relative;
+    width: 14vw;
+    height: 18vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background-color: white;
+    margin-top: 30px;
+    border: 2px solid #F4D44B;
+
+}
+
+/* Placeholder for each product image */
+.item-image {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    display: flex;
+    justify-items: center;
+    position: relative;
+    
+}
+
+/* Order Button */
+.order-button {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: #F4D44B; 
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+
+.order-button:hover {
+    background-color: #FEBA37;
+}
+
+.add-scroll {
+    width: 50vw;
+    max-height: 51vh; /* Set a height limit for the scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Optional: Add some padding */
+    display: flex; /* Use flex for layout */
+    flex-wrap: wrap; /* Allow wrapping of product boxes */
+    margin-left: 2vw;
+}
+
+.scroll-container {
+    display: flex; /* Keep it as flex for internal items */
+    flex-wrap: wrap; /* Allow items to wrap in a new row */
+    gap: 2vw; /* Space between product boxes */
+    width: 100%; /* Ensure it takes full width */
+}
+
+.product-box1 {
+
+    position: relative;
+    width: 14vw; /* Adjust width for 3 columns (minus gap) */
+    height: 19vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #F4D44B; /* Keeping the border */
+    border-radius: 30px;
+    background-color: white;
+    
+}
+
+/* Optional: Add some responsive design */
+@media (max-width: 800px) {
+    .product-box1 {
+        width: calc(50% - 10px); /* Two columns for smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .product-box1 {
+        width: 100%; /* One column for very small screens */
+    }
+}
+
+
+
+.ingredient {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+  
+
+}
+
+.ingredient button {
+    margin: 0 5px; /* Space between buttons */
+    cursor: pointer; /* Change cursor on hover */
+    width: 1.5vw;
+    background-color: #F4D44B;
+}
+
+.order-button1 {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: #F4D44B; 
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    font-weight: bold;
+    color: black;
+    font-size: 25px;
+}
+
+.order-button1:hover {
+    background-color: #FEBA37;  
+}
+
+
+
+/* Styles for the modal dialog */
+/* Styles for the modal dialog */
+/* Styles for the modal dialog */
+.modalinfo {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 20vh; 
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 20vh; 
+}
+
+.modal-content {
+    width: 40vw;          
+    height: 30vh;        
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 2px solid #3a393954;
+    display: flex;        
+    flex-direction: column; 
+    position: relative; /* Allows absolute positioning for close button */
+}
+
+
+.modal-contentinfo {
+    width: 40vw;          
+    height: 60vh;        
+    background-color: #fefefe;
+    margin: 1% auto; 
+    padding: 20px;
+    border: 2px solid #3a393954;
+    display: flex;        
+    flex-direction: column; 
+    position: relative; /* Allows absolute positioning for close button */
+}
+
+.CClose {
+    position: absolute; /* Positioning close button in the corner */
+    top: 10px;         /* Distance from top */
+    right: 10px;       /* Distance from right */
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer; 
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Message styles */
+.message {
+    flex-grow: 1; /* Take up remaining space */
+    display: flex; /* Center content */
+    justify-content: center; 
+    align-items: center;
+
+}
+
+
+.modal-content p {
+    font-size: 25px; 
+    margin: 0; /* Remove margin for better centering */
+    color: black; /* Adjust color for visibility on blue background */
+}
+
+/* Button Styles */
+.yesorno {
+    display: flex; /* Use flexbox to align buttons */
+    justify-content: center; /* Center buttons */
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px; /* Space above buttons */
+}
+
+.confirm-cancel, .deny-cancel {
+    padding: 12px 24px; 
+    font-size: 20px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #4CAF50; 
+    color: white; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.confirm-cancel:hover {
+    background-color: #45a049; 
+    transform: scale(1.05); 
+}
+
+.deny-cancel:hover {
+    background-color: #f44336; /* Red for "No" button */
+    transform: scale(1.05);
+}
+
+.summary_table {
+    width: 100%; /* Full width of the container */
+    max-width: 800px; /* Set a maximum width for the table */
+    border-collapse: collapse; /* Remove gaps between cells */
+    table-layout: fixed; /* Use fixed layout to prevent stretching */
+}
+
+.summary_table td {
+    white-space: normal; /* Allow text to wrap */
+}
+
+/* Header styling */
+.summary_table th, .summary_table td {
+    padding: 8px; /* Padding for cells */
+    text-align: left; /* Align text to the left */
+}
+.summary_table td {
+    max-width: 150px; /* Set a maximum width for each cell */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis if text is too long */
+    white-space: nowrap; /* Prevent wrapping if desired */
+}
+
+/* Qty cell specific style */
+.qty-cell {
+    width: 50px; /* Desired width for quantity */
+    text-align: center; /* Center the text */
+}
+
+/* Optional: to ensure long text doesn't overflow */
+.qty-cell input {
+    width: 50%; /* Make input take full width */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    border: none; /* Remove border */
+    text-align: center; /* Center the input text */
+}
+
+.void-button {
+    cursor: pointer;
+    font-weight: bold;
+    color: red; /* Color of the X button */
+    border: none;
+    background: none;
+}
+
+.void-cell {
+    padding-left: 10px; /* Add padding for space */
+}
+
+.qty-input {
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline on focus */
+    box-shadow: none; /* Remove any shadow if present */
+    text-align: center; /* Center the text for better appearance */
+}
+
+#modal-image{
+    max-width: 100%;  /* Prevent the image from overflowing */
+    max-height: 25vh; /* Limit the height of the image */
+    object-fit: contain; /* Ensures the image fits within the container without distorting */
+    margin: 0 auto;   /* Centers the image horizontally */
+   
+}

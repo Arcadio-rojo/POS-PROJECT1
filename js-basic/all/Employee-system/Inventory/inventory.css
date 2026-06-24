@@ -1,0 +1,109 @@
+
+
+.inventory {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+ 
+.Select {
+    display: flex;
+    margin-left: 63vw;
+    margin-top: 2vh;
+    justify-content: flex-start;
+}
+
+.Select select {
+    width: 10vw;
+    height: 4vh;
+    border-radius: 10px;
+    border: 2px solid #F4D44B;
+}
+
+
+.table {
+    background-color: white;
+    border-radius: 20px;
+    width: 80%;  /* Set table width to 80% */
+    margin: 0 auto; /* Center the table */
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;  /* Make the table width 100% within its container */
+    border-collapse: collapse;
+    background-color: #FCF5E5;
+    table-layout: fixed; 
+    border: none; /* Remove overall table border */
+}
+
+table thead th,
+table tbody td { 
+    border: none; /* Remove borders from table header and body cells */
+}
+
+table thead th {
+    background-color: white;
+    color: black;
+    text-align: center;
+    position: sticky; 
+    top: 0;          
+    z-index: 2;     
+}
+
+table td {
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: #FCF5E5;
+}
+
+table tr:hover {
+    background-color: white;
+}
+
+table tr {
+    height: 40px;
+}
+
+.scroll-table {
+    max-height: 53vh; 
+    overflow-y: auto;  
+    border: none; 
+    margin: 20px;
+}
+
+
+.search-container {
+    display: flex;  
+    align-items: center; 
+}
+
+#searchBar {
+    width: 18vw; 
+    height: 4vh;  
+    border-radius: 10px;  
+    border: 2px solid #F4D44B; 
+    padding: 0 10px; 
+    margin-top: 3vh;
+    margin-left: 1vw;
+}
+
+.guide-inventory {
+    width: 70vw;
+    height: 65vh;
+    background-color: #FCF5E5;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 60px;
+    margin-top: 3vh;
+    border-radius: 20px;
+    border: 1px solid #F2B234;
+   
+}
+
+table tr {
+    height: 40px; 
+}
+

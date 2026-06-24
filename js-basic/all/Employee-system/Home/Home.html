@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="../Index/index.css" rel="stylesheet" type="text/css">
+    <link href="home.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <section id="Home" class="home">
+        <div class="left-container">
+            <div class="profile">
+                <img src="../Transaction/Pictures/Pics_burger/abc.png" class="profile-pic" id="profilePic">
+                <div class="upload-overlay" onclick="document.getElementById('fileUpload').click()"></div>
+                <input type="file" class="my_file" accept="image/*" id="fileUpload" style="display: none;">
+            </div>
+            <h2>Employee Name</h2>
+            <p>Employee</p>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">HOME</a></li>
+                    <li><a href="../Transaction/Transaction.html">TRANSACTION</a></li>
+                    <li><a href="../Inventory/inventory.html">INVENTORY</a></li>
+                    <li><a href="../My_Records/records.html">MY RECORD</a></li>
+                </ul>
+            </nav>
+            <div class="logout"> 
+                <a href="#" onclick="logTimeOut(); return false;" rel="stylesheet" type="text/css">
+                    <img src="../Home/Picstures/Exita.png" alt="Exit" /> Log Out
+                    </a>
+            </div>
+            
+        </div>
+
+        <div class="main-content">
+            <div class="top-container">
+                <h2>HOME</h2>
+            </div>
+            <div class="home_home">
+                <h1>MARETASTE</h1>
+                <h3>Ang Foodtrip ng Bayan</h3>
+            </div>
+            <div class="image">
+                <img src="Picstures/123.png" class="bg-pic" id="background_Pic" alt="Background Image">
+            </div>
+            <div class="qoutes">
+                <p>Maretaste began in 2020 as a single food stall placed in the corner of our street selling affordable milkteas and snacks. It started as a small-scale venture that until now is working.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="../Index/index.js"></script>
+</body>
+</html>

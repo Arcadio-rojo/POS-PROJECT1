@@ -1,0 +1,136 @@
+:root {
+    --container-width: 75vw;
+    --container-height: 70vh;      /* Adjustable container height */
+    --container-padding: 40px;
+    --border-color: #f3eed6;
+    --bg-light-color: #FCF5E5;
+    --bg-primary-color: #f3dba4;
+    --text-color-primary: #000000;
+    --input-bg-color: #f9f9f9;
+    --input-border-color: #ccc;
+    --button-bg-color: #eb6351;
+    --button-hover-color: #e3b84d;
+    --input-width: 100%;
+    --font-weight: bold;
+    --text-size: 20px;               /* Adjustable text size */
+    --text-color: #050505;           /* Adjustable text color */
+    --text-padding: 20px;            /* Adjustable text padding */
+    --h1-font-size: 32px;            /* Adjustable h1 font size */
+    --h5-font-size: 18px;            /* Adjustable h5 font size */
+    --placeholder-color: #A9A9A9;    /* Placeholder color */
+    
+}
+
+/* Container Styling */
+.container {
+    width: var(--container-width);
+    height: var(--container-height);
+    background-color: var(--bg-light-color);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: var(--container-padding);
+    margin: 50px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Row Styling */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Column Styling */
+.col-md-6 {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Primary Background */
+.bg-primary {
+    background-color: var(--bg-primary-color);
+    color: var(--text-color-primary);
+    border-radius: 5px 0 0 5px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Form Elements */
+.form-group {
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.form-control {
+    width: var(--input-width);
+    background-color: var(--input-bg-color);
+    border: 1px solid var(--input-border-color);
+    border-radius: 10px;
+    padding: 15px;
+    padding-top: 20px; /* Space for the placeholder */
+    transition: padding-top 0.2s ease, border-color 0.2s ease; /* Smooth transitions */
+    font-size: 16px; /* Base font size */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow */
+}
+
+/* Label Styles */
+label {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    transition: all 0.2s ease;
+    color: var(--placeholder-color); /* Use variable for placeholder color */
+    pointer-events: none; /* Allow clicks on input fields */
+}
+
+/* Move label on input focus or when input is not empty */
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label {
+    top: -10px; /* Adjust the label position */
+    left: 15px;
+    font-size: 12px; /* Smaller font size when floating */
+    color: #000; /* Color when the label is floating */
+}
+
+/* H1 Styling */
+h1 {
+    font-size: var(--h1-font-size); /* Use variable for h1 font size */
+    color: var(--text-color); /* Ensure text color consistency */
+    margin-bottom: 20px; /* Add some spacing below the h1 */
+    text-align: center; /* Center the text horizontally */
+}
+
+/* H5 Styling */
+h5 {
+    font-size: var(--h5-font-size); /* Use variable for h5 font size */
+    color: var(--text-color); /* Ensure text color consistency */
+    margin-bottom: 10px; /* Adjust bottom margin for spacing below */
+    margin-top: 15px; /* Adjust top margin for spacing above */
+    text-align: left; /* Align left or adjust as needed */
+}
+
+/* Button Styling */
+.btn-primary {
+    width: 100%; /* Set to full width of the column */
+    padding: 15px;
+    background-color: var(--button-bg-color);
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* Slightly more rounded corners */
+    cursor: pointer;
+    font-weight: var(--font-weight);
+    font-size: 16px; /* Consistent button font size */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.btn-primary:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px); /* Lift effect on hover */
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="index_admin.css" rel="stylesheet" type="text/css">
+  
+</head>
+<body>
+    <section id="Dashboard" class="dashboard">
+        <div class="left-container">
+            <div class="profile">
+                <img src="pictures/NProfile.jpg" class="profile-pic" id="profilePic">
+                <div class="upload-overlay" onclick="document.getElementById('fileUpload').click()">
+                </div>
+                <input type="file" class="my_file" accept="image/*" id="fileUpload" style="display: none;">
+            </div>
+            <h2>Business Owner</h2>
+            <p>Admin</p>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">DASHBOARD</a></li>
+                    <li><a href="#">PRODUCTS</a></li>
+                    <li><a href="#">SALES</a></li>
+                    <li><a href="#">INVENTORY</a></li>
+                    <li><a href="#">TRANSACTION</a></li>
+                    <li><a href="#">RECORDS</a></li>
+                    <li><a href="#">MAIL</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="../Login-forgot/login.html" rel="stylesheet" type="text/css"><img src="pictures/Exita.png" alt="Exit" /> Log Out</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="top-container">
+                <h2>DASHBOARD</h2>
+            </div>
+        </div>
+    </section>
+
+    <script src="index_admin.js"></script>
+
+</body>
+</html>

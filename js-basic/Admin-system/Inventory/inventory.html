@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="../index_admin/index_admin.css" rel="stylesheet" type="text/css">
+    <link href="inventory.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <section id="Inventory" class="inventory">
+        <div class="left-container">
+            <div class="profile">
+                <img src="../../all/Employee-system/Transaction/Pictures/Pics_burger/abc.png" class="profile-pic" id="profilePic">
+                <div class="upload-overlay" onclick="document.getElementById('fileUpload').click()">
+                </div>
+                <input type="file" class="my_file" accept="image/*" id="fileUpload" style="display: none;">
+            </div>
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+            <h2>Business Owner</h2>
+            <p>Admin</p>
+            <nav>
+                <ul>
+                    <li><a href="../Dashboard/dashboard.html">DASHBOARD</a></li>
+                    <li><a href="../Product/product.html">PRODUCTS</a></li>
+                    <li><a href="../Sales/sales.html">CALENDAR</a></li>
+                    <li><a href="#" class="active">INVENTORY</a></li>
+                    <li><a href="../Transaction_A/transaction_a.html">TRANSACTION</a></li>
+                    <li><a href="../Records/records.html">RECORDS</a></li>
+                    <li><a href="../Mail/mail.html">MAIL</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="../../all/Employee-system/Login-forgot/login.html" rel="stylesheet" type="text/css"><img src="../index_admin/pictures/Exita.png" alt="Exit" /> Log Out</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="top-container">
+                <h2>INVENTORY</h2>
+            </div>
+            <div class="Inventory_tracking">
+                <div class="line">
+                <div class="search_bar">
+                    <div class="search-container">
+                        <input type="text" id="searchBar" placeholder="Search..." onkeyup="filterTable()">
+                    </div>
+                </div>
+                <div class="add_del_edit">
+                
+        
+                    <!-- Container for edit and delete buttons -->
+                    <div id="edit-delete-container">
+
+                        <button id="addButton" class="icon-button">
+                            <img src="../index_admin/pictures/more.png" style="width:13px; height:13px" alt="add">
+                            Add
+                            <span class="tooltip">Add</span>
+                        </button>
+                    
+                        <!-- Container for edit and delete buttons -->
+                        <div id="edit-delete-container">
+                            <button id="editButton" class="icon-button">
+                                <img src="../index_admin/pictures/edit.png" style="width:13px; height:13px" alt="edit">
+                                Edit
+                                <span class="tooltip">Edit</span>
+                            </button>
+                    
+
+
+                            <button id="deleteButton" class="icon-button">
+                                <img src="../index_admin/pictures/bin.png" style="width:13px; height:13px" alt="delete">
+                                Delete
+                                <span class="tooltip">Delete</span>
+                            </button>
+                    </div>
+                </div>
+            </div>
+                </div>
+                <div class="inventory_table"> 
+                    <div class="scroll-table" id="stocksTable" style="display: block;"> <!-- Set to block to ensure visibility -->
+                        <table id="inventory_tracking">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Ingredient</th>
+                                    <th>Category</th>
+                                    <th>Stock</th>
+                                    <th>Remaining</th>
+                                    <th>
+                                        <input type="checkbox" id="selectAllCheckbox">
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Rows will be inserted here -->
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                </div>
+                
+    </section>
+
+<!-- Add Item Modal Popup -->
+<div id="posModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 id="modalTitle">Add Item</h2>
+        <p id="dateTimeDisplay"></p>
+
+        <label>Category:</label>
+        <select id="modalCategory">
+            <option value="">--Select Category--</option>
+        </select>
+
+        <label>Ingredient:</label>
+        <select id="modalIngredient" disabled>
+            <option value="">--Select Ingredient--</option>
+        </select>
+
+        <label>Stock:</label>
+        <input type="number" id="modalStock" placeholder="Enter Stock" min="0">
+
+        <label>Remaining:</label>
+        <input type="number" id="modalRemaining" placeholder="Remaining Stock" disabled>
+
+        <button id="submitAdd">Add</button>
+    </div>
+</div>
+ 
+<!-- Delete Confirmation Modal -->
+<div id="deleteModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" id="closeDeleteModal">&times;</span>
+        <h2>Confirm Deletion</h2>
+        <p>Are you sure you want to delete this item?</p>
+        <label for="pinInput">Enter the PIN:</label>
+        <input type="password" id="pinInput" placeholder="Enter your PIN" />
+        <button id="confirmDeleteButton">Delete</button>
+        <button id="cancelDeleteButton">Cancel</button>
+    </div>
+</div>
+ 
+<!-- Modal for editing inventory item -->
+<div id="editModal2" class="modal2">
+    <div class="modal-content">
+        <span id="closeEditModal2" class="close">&times;</span>
+
+        <h2>Edit Inventory</h2>
+
+        <!-- Table for displaying selected rows to edit -->
+        <table id="selectedRowsTable">
+            <thead>
+               
+            </thead>
+            <tbody>
+                <!-- Dynamic rows will be added here -->
+            </tbody>
+        </table>
+
+        <button id="saveEditButton2">Save Changes</button>
+    </div>
+</div>
+
+
+    <script src="../index_admin/index_admin.js"></script>
+    <script src="inventory.js"></script>
+
+</body>
+</html>

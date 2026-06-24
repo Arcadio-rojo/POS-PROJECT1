@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="mail.css" rel="stylesheet" type="text/css">
+    <link href="../index_admin/index_admin.css" rel="stylesheet" type="text/css">
+    <script src="mail.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({ publicKey: "Sc_bU6WJCdYefLS_F" });
+        })();
+    </script>
+</head>
+<body>
+    <section id="Dashboard" class="dashboard">
+        <div class="left-container">
+            <div class="profile">
+                <img src="../../all/Employee-system/Transaction/Pictures/Pics_burger/abc.png" class="profile-pic" id="profilePic">
+            
+               
+            </div>
+            <h2>Business Owner</h2>
+            <p>Admin</p>
+            <nav>
+                <ul>
+                    <li><a href="../Dashboard/dashboard.html">DASHBOARD</a></li>
+                    <li><a href="../Product/product.html">PRODUCTS</a></li>
+                    <li><a href="../Sales/sales.html">CALENDAR</a></li>
+                    <li><a href="../Inventory/inventory.html">INVENTORY</a></li>
+                    <li><a href="../Transaction_A/transaction_a.html">TRANSACTION</a></li>
+                    <li><a href="../Records/records.html">RECORDS</a></li>
+                    <li><a href="#" class="active">MAIL</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="../../all/Employee-system/Login-forgot/login.html" rel="stylesheet" type="text/css"><img src="../index_admin/pictures/Exita.png" alt="Exit" /> Log Out</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="top-container">
+                <h2>Email</h2>
+            </div>
+            <div class="container border mt-3 bg-light">
+                <div class="row">
+                    <div class="col-md-6 p-5 bg-primary text-white">
+                        <h1>Maritaste</h1>
+                        <h4></h4>
+                    </div>
+                    <div class="col-md-6 border-left py-3">
+                        <h1>Contact form</h1>
+                        <h5 for="name">Name</h5>
+                        <input type="text" class="form-control" id="name" placeholder="Enter name" />
+                        <h5 for="email">Email</h5>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" />
+                        <h5 for="message">Message</h5>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Type your message here..."></textarea>
+                        <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

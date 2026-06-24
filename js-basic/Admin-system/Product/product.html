@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="../index_admin/index_admin.css" rel="stylesheet" type="text/css">
+    <link href="product.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <section id="Product" class="product">
+        <div class="left-container">
+            <div class="profile">
+                <img src="../../all/Employee-system/Transaction/Pictures/Pics_burger/abc.png" class="profile-pic" id="profilePic">
+                
+            </div>
+            <h2>Business Owner</h2>
+            <p>Admin</p>
+            <nav>
+                <ul>
+                    <li><a href="../Dashboard/dashboard.html">DASHBOARD</a></li>
+                    <li><a href="#" class="active">PRODUCTS</a></li>
+                    <li><a href="../Sales/sales.html">CALENDAR</a></li>
+                    <li><a href="../Inventory/inventory.html">INVENTORY</a></li>
+                    <li><a href="../Transaction_A/transaction_a.html">TRANSACTION</a></li>
+                    <li><a href="../Records/records.html">RECORDS</a></li>
+                    <li><a href="../Mail/mail.html">MAIL</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="../../all/Employee-system/Login-forgot/login.html" rel="stylesheet" type="text/css"><img src="../../all/Employee-system/Home/Picstures/Exita.png" alt="Exit" /> Log Out</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="top-container">
+                <h2>PRODUCTS</h2>
+            </div>
+            <div class="guide-product">
+                <div class="select-search">
+                    <div class="Select"> 
+                        <select name="Format" id="format" onchange="displayTable(this.value)">
+                            <option value="all">All Products</option>
+                            <option value="Burgers">Burgers</option>
+                            <option value="Hotdog Sandwich">Hotdog Sandwich</option>
+                            <option value="Fries">Fries</option>
+                            <option value="Nuggets">Nuggets</option>
+                            <option value="Fried Noodles">Fried Noodles</option>
+                        </select>
+                    </div>
+                    <div class="search_bar">
+                        <div class="search-container">
+                            <input type="text" id="searchBar" placeholder="Search..." onkeyup="filterTable()">
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll">
+                    <!-- This is the new container for displaying the products dynamically -->
+                    <div id="productDisplay" class="select_product">
+                        <!-- Dynamic content from JavaScript will be placed here -->
+                    </div>
+     
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../index_admin/index_admin.js"></script>
+    <script src="product.js"></script>
+    
+</body>
+</html>

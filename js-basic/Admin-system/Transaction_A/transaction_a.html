@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="transaction_a.css" rel="stylesheet" type="text/css">
+    <link href="../index_admin/index_admin.css" rel="stylesheet" type="text/css">
+  
+</head>
+<body>
+    <section id="Transaction" class="transaction">
+        <div class="left-container">
+            <div class="profile">
+                <img src="../../all/Employee-system/Transaction/Pictures/Pics_burger/abc.png" class="profile-pic" id="profilePic">
+              
+            </div>
+            <h2>Business Owner</h2>
+            <p>Admin</p>
+            <nav>
+                <ul>
+                    <li><a href="../Dashboard/dashboard.html">DASHBOARD</a></li>
+                    <li><a href="../Product/product.html">PRODUCTS</a></li>
+                    <li><a href="../Sales/sales.html">CALENDAR</a></li>
+                    <li><a href="../Inventory/inventory.html">INVENTORY</a></li>
+                    <li><a href="#" class="active">TRANSACTION</a></li>
+                    <li><a href="../Records/records.html">RECORDS</a></li>
+                    <li><a href="../Mail/mail.html">MAIL</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="../../all/Employee-system/Login-forgot/login.html" rel="stylesheet" type="text/css"><img src="../index_admin/pictures/Exita.png" alt="Exit" /> Log Out</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="top-container">
+                <h2>TRANSACTION</h2>
+            </div> 
+<div class="center">
+            <div class="controls-container">
+                <div class="select-container">
+                    <select id="sortFilter" onchange="sortTransactions()">
+                        <option value="">Sort by Total Amount</option>
+                        <option value="high">Highest to Lowest</option>
+                        <option value="low">Lowest to Highest</option>
+                    </select>
+                </div>
+
+                <div class="search-container">
+                    <input type="date" id="dateSearch" onchange="filterByDate()">
+                </div>
+            </div>
+
+            <div class="table-container"> 
+                <div class="scroll-table">
+                    <table>
+                        <thead>    
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Category</th>
+                                <th>Total Item</th>
+                                <th>Total Amount</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>  
+                        <tbody id="transactionBody"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="totals-container">
+                <h3>Total Items: <span id="totalItems">0</span></h3>
+                <h3>Total Amount: ₱ <span id="totalAmount">0.00</span></h3>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../index_admin/index_admin.html"></script>
+    <script src="transaction_a.js"></script>
+
+</body>
+</html>

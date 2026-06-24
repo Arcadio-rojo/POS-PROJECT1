@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG-IN</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section id="Login" class="login">
+        <div class="wrapper">
+            <form id="loginForm"> <!-- Added an ID for the form -->
+                <h1>LOG IN</h1>
+                <div class="input-box">
+                    <img src="Pictures/user.png" alt="user" /> 
+                    <input type="text" id="email" placeholder="Email" required> <!-- Changed placeholder to Email -->
+                </div>
+                <div class="input-box">
+                    <img src="Pictures/lock.png" alt="password" /> 
+                    <input type="password" id="password" placeholder="Password" required>
+                    <div class="eye" id="togglePassword">
+                        <i class='bx bx-show'></i>
+                    </div>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember Me</label>
+                    <ul> 
+                        <li><a href="Forgot-password.html">Forgot Password</a></li>
+                    </ul>
+                </div>
+                <div class="btn-box">
+                    <a href="#" id="cancelBtn">Cancel</a>
+                    <button type="submit" id="submitBtn">Continue</button>
+                </div>
+                
+            </form>    
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

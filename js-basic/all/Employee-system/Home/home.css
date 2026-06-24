@@ -1,0 +1,95 @@
+.home_home {
+    width: 100%;
+    height: 18vh;
+    display: flex;            
+    flex-direction: column;  
+    align-items: center;     
+    justify-content: center; 
+}
+
+.home_home h1,
+.home_home h3 {
+    margin: 0;               
+    text-align: center;   
+    color: #925E33;
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+/* Fade-in animation with a delay */
+.home_home h1 {
+    font-size: 70px;
+    animation: fadeInUp 1s forwards 0.5s; 
+    cursor: pointer;
+}
+
+.home_home h3 {
+    font-size: 20px;
+    animation: fadeInUp 1s forwards 1s; 
+    cursor: pointer;
+}
+
+/* Keyframes for fade-in and slide-up effect */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Hover effect for headings */
+.home_home h1:hover,
+.home_home h3:hover {
+    color: #fff; /* Change color on hover */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow on hover */
+}
+
+.image {
+    width: 100%;
+    height: 45vh;
+    position: relative; /* Position relative for absolute positioning of the img */
+    overflow: hidden; /* Ensure no overflow from the image */
+}
+
+.bg-pic {
+    position: absolute; /* Position absolute to cover the container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    transform: translate(-50%, -50%); /* Center the image */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Fade-in animation */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translate(-50%, -40%); /* Move slightly up */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translate(-50%, -50%); /* Original position */
+    }
+}
+
+.qoutes {
+    width: 40vw; /* Set width to 40% of the viewport width */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Padding for spacing */
+    font-size: 20px; /* Font size for the text */
+    border-radius: 10px; /* Rounded corners */
+    margin: 90px auto; /* Center the section horizontally with margin */
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(20px); /* Move slightly down */
+    animation: fadeIn 1s forwards 1.5s; /* Fade-in animation */
+}
+
+
+/* Styling for the paragraph */
+.qoutes p {
+    margin: 0; /* Remove default margin */
+    line-height: 1.5; /* Improve readability */
+    color: #333; /* Text color */
+}

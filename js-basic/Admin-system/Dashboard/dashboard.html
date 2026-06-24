@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="../index_admin/index_admin.css" rel="stylesheet" type="text/css">
+    <link href="dashboard.css" rel="stylesheet" type="text/css">
+</head> 
+<body>
+    <section id="Dashboard" class="dashboard">
+        <div class="left-container">
+            <div class="profile">
+                <img src="../../all/Employee-system/Transaction/Pictures/Pics_burger/abc.png" class="profile-pic" id="profilePic">
+               
+                </div>
+               
+            <h2>Business Owner</h2>
+            <p>Admin</p>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">DASHBOARD</a></li>
+                    <li><a href="../Product/product.html">PRODUCTS</a></li>
+                    <li><a href="../Sales/sales.html">CALENDAR</a></li>
+                    <li><a href="../Inventory/inventory.html">INVENTORY</a></li>
+                    <li><a href="../Transaction_A/transaction_a.html">TRANSACTION</a></li>
+                    <li><a href="../Records/records.html">RECORDS</a></li>
+                    <li><a href="../Mail/mail.html">MAIL</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="../../all/Employee-system/Login-forgot/login.html" rel="stylesheet" type="text/css"><img src="../index_admin/pictures/Exita.png" alt="Exit" /> Log Out</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="top-container">
+                <h2>DASHBOARD</h2>
+            </div>
+            <div class="guide-dash">
+                <div class="bar-chart">
+                    <canvas id="bar_chart" width="1200" height="400"></canvas>
+                </div>
+                
+                <div class="pie-chart"> 
+                    <canvas id="pie_chart" width="400" height="400"></canvas>
+                </div>
+
+                <div class="table"> 
+                    <h3>SALES TRACKING</h3>  
+                    <div class="scroll-table" id="stocksTable" style="display: block;"> <!-- Set to block to ensure visibility -->
+                        <table border="1">
+                            <thead>  
+            
+                                <tr>
+                                    <th>MONTH</th>
+                                    <th>SALES</th>
+                                    <th>RATE</th>
+                                </tr>
+                            </thead>  
+                            <tbody id="sale_tracking">
+
+                                <!-- Rows will be added here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="performance">
+                    <h3>Events</h3>
+                    <ul id="Eventscalendar"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="../index_admin/index_admin.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

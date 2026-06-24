@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction</title>
+    <link href="../Index/index.css" rel="stylesheet" type="text/css">
+    <link href="transactio.css" rel="stylesheet" type="text/css">
+  
+</head>
+<body>
+    <section id="Transaction" class="transaction">
+        <div class="left-container">
+            <div class="profile">
+                <img src="Pictures/Pics_burger/abc.png" class="profile-pic" id="profilePic">
+                
+            </div>
+            <h2>Employee Name</h2>
+            <p>Employee</p>
+            <nav>
+                <ul>
+                    <li><a href="../Home/Home.html">HOME</a></li>
+                    <li><a href="#" class="active">TRANSACTION</a></li>
+                    <li><a href="../Inventory/inventory.html">INVENTORY</a></li>
+                    <li><a href="../My_Records/records.html">MY RECORD</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#" onclick="logTimeOut(); return false;" rel="stylesheet" type="text/css">
+                    <img src="../Home/Picstures/Exita.png" alt="Exit" /> Log Out
+                    </a>
+            </div>
+            
+        </div>
+
+        <main class="main-content">
+            <!-- Top Header -->
+            <div class="top-container">
+                <h2>TRANSACTION</h2>
+            </div>
+            
+            <!-- Menu Items Section (You can add menu items here) --> 
+            <div class="combined-container">
+                <section class="menu-items">
+                    <button class="menu-item" id="burgers" onclick="showProduct('Burgers')">BURGERS</button>
+                    <button class="menu-item" id="hotdog" onclick="showProduct('Hotdog')">HOTDOG<br>SANDWICH</button>
+                    <button class="menu-item" id="fries" onclick="showProduct('Fries')">FRIES</button>
+                    <button class="menu-item" id="nuggets" onclick="showProduct('Nuggets')">NUGGETS</button>
+                    <button class="menu-item" id="fried-noodles" onclick="showProduct('Fried Noodles')">FRIED<br>NOODLES</button>
+                    <button class="menu-item" id="adds-on"  onclick="showProduct('Other')">ADDS ON</button>
+                    <div class="product" id="product-display">
+                    </div>
+                </section>
+                          
+        
+                <div class="summary-container">
+                        <h1>SUMMARY</h1>
+                    <div class="tableee">
+                        <table class="summary_table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="summary-body">
+                         
+
+                            <!-- Summary items will be added here -->
+                        </tbody>
+                        </table>
+                        </div>
+                        <div class="summary-footer">
+                            <div class="startline">
+                            <h1> ________________</h1>
+                    
+                                
+                            <p>Total Item: <span id="total-items">0</span></p>
+                            <p>Total Amount: ₱ <span id="total-amount">0.00</span></p>
+                            <p>Time: <span id="current-time"></span></p>
+                            <p>Date: <span id="current-date"></span></p>
+                            
+                        </div>
+                            <div class="endline">
+                                <div class="C_P_B">
+                            <button id="cancel-button" class="cancel-button">Cancel</button>
+                            <button id="process-button" class="process-button" onclick="processTransaction()">Process</button>
+                           </div>
+
+
+                            <div id="confirmation-modal" class="modal">
+                                <div class="modal-content">  
+                                    <div class="CClose">
+                                    <span class="close" id="close-modal">&times;</span>
+                                    </div>
+                                    <div class="message">
+                                    <p>Are you sure you want to cancel the transaction?</p>
+                                    </div>
+                                    <div class="yesorno">
+                                    <button  id="confirm-cancel" class="confirm-cancel">Yes</button>
+                                    <button id="deny-cancel" class="deny-cancel">No</button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>     
+                    </div>                 
+     
+
+     
+        </main>
+ 
+    </section>
+    <div id="product-modal" class="modalinfo">
+        <div class="modal-contentinfo">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Product Image">
+            <h2 id="modal-title"></h2>
+           <!-- Update the modal table structure -->
+            <table id="ingredient-table">
+                <thead>
+                    <tr>
+                        <th>Ingredient</th>
+                        <th>Cost</th>
+                        <th>Stock</th>
+                        <th>Remaining</th>
+                     
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic rows will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="transaction.js"></script>
+    <script src="../Index/index.js"></script>
+</body>
+</html>
